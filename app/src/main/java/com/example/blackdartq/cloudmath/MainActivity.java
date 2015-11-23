@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Button ohmButton;
     TextView totalTextView;
     int whichButtonsClicked;
+    int backgroundColor = Color.parseColor("#00b2ff");
+    int textColor = Color.parseColor("#000000");
 
 
 
@@ -92,13 +94,13 @@ public class MainActivity extends AppCompatActivity {
     public void changeButtonColor(){
 
         // change everything back to normal
-        wattButton.setBackgroundColor(Color.CYAN);
+        wattButton.setBackgroundColor(backgroundColor);
         wattButton.setTextColor(Color.BLACK);
-        ohmButton.setBackgroundColor(Color.CYAN);
+        ohmButton.setBackgroundColor(backgroundColor);
         ohmButton.setTextColor(Color.BLACK);
-        voltButton.setBackgroundColor(Color.CYAN);
+        voltButton.setBackgroundColor(backgroundColor);
         voltButton.setTextColor(Color.BLACK);
-        ampButton.setBackgroundColor(Color.CYAN);
+        ampButton.setBackgroundColor(backgroundColor);
         ampButton.setTextColor(Color.BLACK);
 
         //sets the buttons colors
