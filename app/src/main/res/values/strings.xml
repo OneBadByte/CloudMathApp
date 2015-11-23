@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CloudMath</string>
+    <string name="Text1"></string>
+    <string name="Text2"></string>
+    <string name="Radio1">Amps/Battery</string>
+    <string name="Radio2">Ohm/Resistance</string>
+    <string name="Radio3">Watts/Power</string>
+    <string name="ButtonText">Make it so</string>
+    <string name="TotalText"></string>
+
+</resources>
