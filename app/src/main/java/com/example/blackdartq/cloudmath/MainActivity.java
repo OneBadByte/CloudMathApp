@@ -1,33 +1,30 @@
 package com.example.blackdartq.cloudmath;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.TextView;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
-import android.*;
-import android.widget.RadioGroup;
-import android.view.*;
-import android.widget.RadioGroup.*;
-import android.widget.Toast;
+import android.widget.Button;
+import android.widget.TextView;
+import android.support.v4.app.*;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     Button wattButton;
     Button voltButton;
     Button ampButton;
     Button ohmButton;
+    Button infoButton;
     TextView totalTextView;
     int whichButtonsClicked;
     int backgroundColor = Color.parseColor("#00b2ff");
     int textColor = Color.parseColor("#000000");
-
-
-
+    int fragmentCurrentlyOn = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         // ------------------------ Declaring section --------
-
         wattButton = (Button)findViewById(R.id.wattButton);
         voltButton = (Button)findViewById(R.id.voltButton);
         ohmButton = (Button)findViewById(R.id.ohmButton);
         ampButton = (Button)findViewById(R.id.ampButton);
+        infoButton = (Button)findViewById(R.id.infoButton);
         totalTextView = (TextView)findViewById(R.id.totalTextView);
+
 
 
         //---------- Buttons-------------------------------------
@@ -53,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
                 whichButtonsClicked = 1;
                 changeButtonColor();
 
+                OhmsFragment ohmsFragment = new OhmsFragment();
+                android.app.FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.add(R.id.defaultFragmentlayout, ohmsFragment);
+                ft.commit();
+
+
             }
         });
 
@@ -63,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
                 whichButtonsClicked = 2;
                 changeButtonColor();
 
+                WattsFragment wattsFragment = new WattsFragment();
+                DefaultFragment defaultFragment = new DefaultFragment();
+                android.app.FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.add(R.id.defaultFragmentlayout, wattsFragment);
+                ft.commit();
+
             }
         });
 
@@ -72,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
                 totalTextView.setText(" ");
                 whichButtonsClicked = 3;
                 changeButtonColor();
+                AmpsFragment ampsFragment = new AmpsFragment();
+                android.app.FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.add(R.id.defaultFragmentlayout, ampsFragment);
+                ft.commit();
             }
         });
 
@@ -82,11 +99,26 @@ public class MainActivity extends AppCompatActivity {
                 totalTextView.setText(" ");
                 whichButtonsClicked = 4;
                 changeButtonColor();
+                VoltsFragment voltsFragment = new VoltsFragment();
+                android.app.FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.add(R.id.defaultFragmentlayout, voltsFragment);
+                ft.commit();
+
+            }
+        });
+
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), InfoActivity.class);
+                startActivity(i);
+
             }
         });
 
 
-
+        //ft.commit();
 
     }
 
@@ -123,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
 
 
