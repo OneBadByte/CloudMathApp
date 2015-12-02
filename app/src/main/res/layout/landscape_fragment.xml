@@ -3,6 +3,6 @@
     android:layout_width="fill_parent"
     android:layout_height="350dp"
     android:layout_marginTop="120dp"
-    android:background="#ffffff">
+    android:background="#a5bbff">
 
 </RelativeLayout>

@@ -16,16 +16,7 @@ import android.support.v4.app.*;
 
 public class MainActivity extends FragmentActivity {
 
-    Button wattButton;
-    Button voltButton;
-    Button ampButton;
-    Button ohmButton;
-    Button infoButton;
-    TextView totalTextView;
-    int whichButtonsClicked;
-    int backgroundColor = Color.parseColor("#00b2ff");
-    int textColor = Color.parseColor("#000000");
-    int fragmentCurrentlyOn = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

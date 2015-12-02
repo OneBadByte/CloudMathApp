@@ -6,7 +6,7 @@
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Please select a button"
         android:id="@+id/totalTextView"
@@ -21,8 +21,8 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:text="OHM"
         android:id="@+id/ohmButton"
         android:layout_below="@+id/totalTextView"
@@ -30,11 +30,11 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="2dp"
         android:background="#00b2ff"
-        android:layout_marginLeft="10dp" />
+        />
 
     <Button
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:text="Watts"
         android:id="@+id/wattButton"
         android:layout_alignTop="@+id/ohmButton"
@@ -44,7 +44,7 @@
 
     <Button
         android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Amps"
         android:id="@+id/ampButton"
         android:layout_alignTop="@+id/wattButton"
@@ -54,7 +54,7 @@
 
     <Button
         android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Volts"
         android:id="@+id/voltButton"
         android:layout_alignTop="@+id/ampButton"
@@ -63,23 +63,13 @@
         android:background="#00b2ff" />
     <Button
         android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Info"
         android:id="@+id/infoButton"
         android:layout_alignBottom="@+id/voltButton"
         android:layout_toRightOf="@+id/voltButton"
         android:layout_toEndOf="@+id/voltButton"
         android:background="#00b2ff" />
-
-    <fragment
-        android:layout_width="fill_parent"
-        android:layout_height="350dp"
-        android:name="com.example.blackdartq.cloudmath.DefaultFragment"
-        android:id="@+id/fragment2"
-        android:layout_alignParentBottom="true"
-        tools:layout="@layout/portrait_fragment"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

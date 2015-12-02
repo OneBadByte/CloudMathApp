@@ -17,7 +17,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/ohmButton"
-        tools:layout="@layout/default_fragment" />
+        tools:layout="@layout/portrait_fragment" />
 
     <fragment
         android:layout_width="wrap_content"

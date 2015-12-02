@@ -4,4 +4,22 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="#4c4c4c">
 
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:name="com.example.blackdartq.cloudmath.LandscapeDefaultFragment"
+        android:id="@+id/fragment3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/landscape_fragment" />
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.example.blackdartq.cloudmath.ButtonFragment"
+        android:id="@+id/fragment4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/button_fragment" />
 </RelativeLayout>
